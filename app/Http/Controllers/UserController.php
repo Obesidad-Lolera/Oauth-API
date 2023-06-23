@@ -42,6 +42,7 @@ class UserController extends Controller
         return auth('api')->user();
     }
 
+    
     public function Logout(Request $request){
         $request->user()->token()->revoke();
         return ['message' => 'Token Revoked'];
